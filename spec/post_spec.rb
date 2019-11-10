@@ -1,15 +1,15 @@
 require 'spec_helper'
 
 describe 'Post' do
-  let!(:post) { Post.new("My Blog Post!") }
-  let!(:post2) { Post.new("My Newest Blog Post!") }
+  let!(:post) { Post.new('My Blog Post!') }
+  let!(:post2) { Post.new('My Newest Blog Post!') }
 
   after(:each) do
     Post.class_variable_set(:@@all, [])
   end
 
   describe '#new' do
-    it "is initialized with an argument of a title" do
+    it 'is initialized with an argument of a title' do
       expect { Post.new('Hello World') }.to_not raise_error
     end
 
