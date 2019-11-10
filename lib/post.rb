@@ -8,6 +8,10 @@ class Post
     @@all << self
   end
   
+  def author_name
+    return
+  end
+  
   def self.all
     return @@all
   end
