@@ -9,8 +9,8 @@ describe 'Post' do
   end
 
   describe '#new' do
-    it 'is initialized with an argument of a title' do
-      expect { Post.new('Hello World') }.to_not raise_error
+    it "is initialized with an argument of a title" do
+      expect { Post.new("Hello World") }.to_not raise_error
     end
 
     it 'pushes new instances into a class variable called @@all upon initialization' do
@@ -38,7 +38,7 @@ describe 'Post' do
 
   describe '#author' do
     it 'belongs to an author' do
-      sophie = Author.new('Sophie')
+      sophie = Author.new("Sophie")
       post.author = sophie
       expect(post.author).to eq(sophie)
     end
@@ -46,9 +46,9 @@ describe 'Post' do
 
   describe '#author_name' do
     it 'knows the name of its author' do
-      sophie = Author.new('Sophie')
+      sophie = Author.new("Sophie")
       post.author = sophie
-      expect(post.author_name).to eq('Sophie')
+      expect(post.author_name).to eq("Sophie")
     end
 
     it 'returns nil if the post does not have an author' do
